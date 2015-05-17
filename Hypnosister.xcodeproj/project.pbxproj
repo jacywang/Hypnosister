@@ -14,6 +14,7 @@
 		9CCCCDF71B09131300D9F972 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCCDF61B09131300D9F972 /* Images.xcassets */; };
 		9CCCCDFA1B09131300D9F972 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCCDF81B09131300D9F972 /* LaunchScreen.xib */; };
 		9CCCCE061B09131300D9F972 /* HypnosisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE051B09131300D9F972 /* HypnosisterTests.m */; };
+		9CCCCE111B0914C900D9F972 /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE101B0914C900D9F972 /* HypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		9CCCCDFF1B09131300D9F972 /* HypnosisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnosisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCCCE041B09131300D9F972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCCCE051B09131300D9F972 /* HypnosisterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisterTests.m; sourceTree = "<group>"; };
+		9CCCCE0F1B0914C900D9F972 /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		9CCCCE101B0914C900D9F972 /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				9CCCCDF01B09131300D9F972 /* ViewController.h */,
 				9CCCCDF11B09131300D9F972 /* ViewController.m */,
 				9CCCCDF31B09131300D9F972 /* Main.storyboard */,
+				9CCCCE0F1B0914C900D9F972 /* HypnosisView.h */,
+				9CCCCE101B0914C900D9F972 /* HypnosisView.m */,
 				9CCCCDF61B09131300D9F972 /* Images.xcassets */,
 				9CCCCDF81B09131300D9F972 /* LaunchScreen.xib */,
 				9CCCCDE91B09131300D9F972 /* Supporting Files */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CCCCDF21B09131300D9F972 /* ViewController.m in Sources */,
+				9CCCCE111B0914C900D9F972 /* HypnosisView.m in Sources */,
 				9CCCCDEF1B09131300D9F972 /* AppDelegate.m in Sources */,
 				9CCCCDEC1B09131300D9F972 /* main.m in Sources */,
 			);
