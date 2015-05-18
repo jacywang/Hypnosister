@@ -8,8 +8,14 @@
 
 #import "HypnosisView.h"
 
-@implementation HypnosisView
+@interface HypnosisView ()
 
+@property (nonatomic, strong) UIColor *circleCorlor;
+
+@end
+
+
+@implementation HypnosisView
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -33,10 +39,24 @@
     
     path.lineWidth = 10;
     
-    [[UIColor lightGrayColor] setStroke];
+    [self.circleCorlor setStroke];
     
     [path stroke];
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%@ was touched", self);
+    float red = arc4random() % 100 / 100.0;
+    float green = arc4random() % 100 / 100.0;
+    float blue = arc4random() % 100 / 100.0;
+    
+    UIColor *randomColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    self.circleCorlor = randomColor;
+}
+
+-(void)setCircleCorlor:(UIColor *)circleCorlor {
+    _circleCorlor = circleCorlor;
+    [self setNeedsDisplay];
+}
 
 @end

@@ -17,18 +17,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-//    CGRect frame = CGRectMake(160, 240, 100, 150);
-    CGRect frame = self.view.bounds;
-    HypnosisView *firstView = [[HypnosisView alloc] initWithFrame:frame];
-    firstView.backgroundColor = [UIColor clearColor];
     
-//    CGRect secondFrame = CGRectMake(20, 30, 50, 50);
-//    HypnosisView *secondView = [[HypnosisView alloc] initWithFrame:secondFrame];
-//    secondView.backgroundColor = [UIColor blueColor];
+    CGRect screenRect = self.view.bounds;
+    CGRect bigrect = screenRect;
+//    bigrect.size.height *= 2;
+    bigrect.size.width *= 2;
     
-    [self.view addSubview:firstView];
-//    [firstView addSubview:secondView];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [self.view addSubview:scrollView];
+    
+    HypnosisView *hypnosisView = [[HypnosisView alloc] initWithFrame:screenRect];
+    hypnosisView.backgroundColor = [UIColor clearColor];
+    [scrollView addSubview:hypnosisView];
+    
+    screenRect.origin.x += screenRect.size.width;
+    HypnosisView *secondScrollView = [[HypnosisView alloc] initWithFrame:screenRect];
+    secondScrollView.backgroundColor = [UIColor clearColor];
+    [scrollView addSubview:secondScrollView];
+    
+    scrollView.contentSize = bigrect.size;
+    scrollView.pagingEnabled = YES;
     
 }
 
